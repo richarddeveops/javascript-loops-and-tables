@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap");
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color: #312821;
+    background: #f5dfc2;
+    font-family: "Oswald", sans-serif;
+}
+
+.loop-sheet {
+    width: min(100% - 36px, 920px);
+    margin: 0 auto;
+    padding: 42px 0 64px;
+}
+
+header {
+    padding: clamp(24px, 6vw, 52px) 0 28px;
+    border-bottom: 1px solid #242720;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: #a64b27;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font: 600 clamp(3.2rem, 10vw, 6.4rem)/.9 "Oswald", sans-serif;
+    letter-spacing: -.035em;
+}
+
+.note { margin: 14px 0 0; color: #775a46; }
+
+#display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+    border-left: 1px solid #c9a989;
+}
+
+#display p {
+    min-height: 48px;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    border-right: 1px solid #c9a989;
+    border-bottom: 1px solid #c9a989;
+    background: #fbf1e4;
+    color: #312821 !important;
+    font: .78rem "Roboto Mono", monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+.table-sheet {
+    width: min(100% - 36px, 1080px);
+    margin: 0 auto;
+    padding: 42px 0 64px;
+}
+
+.table-sheet header {
+    padding: clamp(24px, 6vw, 52px) 0 28px;
+    border-bottom: 1px solid #252820;
+}
+
+.table-sheet .eyebrow { color: #49624e; }
+
+.table-sheet h1 {
+    margin: 0;
+    font: 400 clamp(3.2rem, 10vw, 6.4rem)/.9 "Instrument Serif", serif;
+}
+
+.table-sheet .note { margin: 14px 0 0; color: #71736c; }
+
+.table-output {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+    border-left: 1px solid #d5d3c8;
+}
+
+.table-output p {
+    min-height: 46px;
+    margin: 0 !important;
+    padding: 12px 9px !important;
+    border-right: 1px solid #d5d3c8;
+    border-bottom: 1px solid #d5d3c8;
+    background: #f9f8f4;
+    color: #252820 !important;
+    font: .72rem "Roboto Mono", monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+body { background: #f5dfc2; }
+
+.loop-sheet,
+.table-sheet { max-width: 1160px; }
+
+.loop-sheet header,
+.table-sheet header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 12px 30px;
+    border-bottom: 4px solid #a64b27;
+}
+
+.loop-sheet .eyebrow,
+.table-sheet .eyebrow { grid-column: 1 / -1; color: #a64b27; }
+
+.loop-sheet h1,
+.table-sheet h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(3.4rem, 10vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+}
+
+.loop-sheet .note,
+.table-sheet .note {
+    max-width: 18ch;
+    margin-bottom: 6px;
+    color: #775a46;
+    text-align: right;
+}
+
+#display {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    border-left-color: #c9a989;
+}
+
+#display p {
+    min-height: 56px;
+    border-color: #c9a989;
+    background: #fbf1e4;
+    color: #312821 !important;
+    font: 500 .78rem "Roboto Mono", monospace;
+}
+
+.table-output { border-left-color: #c9a989; }
+
+@media (max-width: 560px) {
+    .loop-sheet header,
+    .table-sheet header { grid-template-columns: 1fr; }
+    .loop-sheet .note,
+    .table-sheet .note { max-width: none; text-align: left; }
+}
+
+@media (max-width: 420px) {
+    .table-output { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
